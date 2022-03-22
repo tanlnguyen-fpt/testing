@@ -1,7 +1,7 @@
 import * as fs from 'fs';
+import _ from 'lodash';
 import * as path from 'path';
 import getTestCase from '../function/get-test-case-from-file';
-import _ from 'lodash';
 import getTypeOfTriangle from '../function/get-type-of-triangle';
 
 type TestCase = {
@@ -9,8 +9,6 @@ type TestCase = {
   b: string | number;
   c: string | number;
   EO: string;
-  RO: string;
-  isHasSQRT?: string;
 };
 
 const csvFilePath = path.resolve(__dirname, '../../TriangleTestCase.csv');

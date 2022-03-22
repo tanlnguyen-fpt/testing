@@ -2,7 +2,7 @@ import apiClient from '../util/apiClient';
 
 jest.setTimeout(10000);
 describe('Test all routes', () => {
-  it('should Pass getting details', async function () {
+  it('should Pass getting Ok', async () => {
     const endpoint = `/`;
     let response;
     try {
