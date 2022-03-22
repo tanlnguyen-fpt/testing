@@ -1,0 +1,11 @@
+ID,a,b,c,EO,RO,isHasSQRT
+1,1,2,3,Not a triangle,,
+2,3,3,3,Equilateral Triangle,,
+3,4,4,5,Isosceles Triangle,,
+4,6,8,10,Right Triangle,,
+5,3,4,2,Normal Triangle,,
+6,8,8,10,Isosceles Triangle,,
+7,4,5,3,Right Triangle,,
+8,4,4,10,Not a triangle,,
+9,5,5,5,Equilateral Triangle,,
+10,10,10,10,Isosceles-Right Triangle,,c:2

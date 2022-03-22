@@ -1,0 +1,25 @@
+import * as fs from 'fs';
+import * as path from 'path';
+import getTestCase from '../function/get-test-case-from-file';
+import _ from 'lodash';
+import getTypeOfTriangle from '../function/get-type-of-triangle';
+
+type TestCase = {
+  a: string | number;
+  b: string | number;
+  c: string | number;
+  EO: string;
+  RO: string;
+  isHasSQRT?: string;
+};
+
+const csvFilePath = path.resolve(__dirname, '../../TriangleTestCase.csv');
+const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
+const testCases = getTestCase(fileContent);
+
+_.forEach(testCases, (testCase: TestCase) => {
+  const { a, b, c, EO } = testCase;
+  test(`I want to test a triangle with a = ${a}, b = ${b}, c = ${c} is a ${EO}`, () => {
+    expect(getTypeOfTriangle(a, b, c)).toBe(EO);
+  });
+});
